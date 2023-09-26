@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->char('kodeMataKuliah', 8);
             $table->text('namaMataKuliah');
-            $table->int('sks');
+            $table->integer('sks');
             $table->timestamps();
         });
     }

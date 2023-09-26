@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('khs_details', function (Blueprint $table) {
             $table->id();
+            $table->char('kodeKhsDetail',8);
+            $table->char('kodeKhs', 8);
+            $table->integer('nilai');
             $table->timestamps();
         });
     }
