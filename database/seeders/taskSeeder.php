@@ -68,7 +68,6 @@ class taskSeeder extends Seeder
     			'tahunMasuk' => '2021',
     			'jurusan' => $faker->address
     		]);
- 
     	}
     }
 }

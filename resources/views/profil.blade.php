@@ -1,4 +1,35 @@
-<!DOCTYPE html>
+@extends('layouts.app')
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+        }
+    </style>
+@section('title','Profil')
+@section('content')
+    <body class="antialiased">
+        <table class="table">
+            <tr>
+                <th scope="row">Nama</th>
+                <td>Friska Loren</td>
+            </tr>
+            <tr>
+                <th scope="row">Nim</th>
+                <td>03081210019</td>
+            </tr>
+            <tr>
+                <th scope="row">Prodi</th>
+                <td>Sistem Informasi</td>
+            </tr>
+            <tr>
+                <th scope="row">Mata Kuliah</th>
+                <td>Pemrograman Aplikasi Bisnis</td>
+            </tr>
+        </table>
+    </body>
+@endsection
+
+{{-- <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -21,10 +52,23 @@
         </style>
     </head>
     <body class="antialiased">
-        <div class="text-center">
-            <h3>Selamat Datang di Website</h3>
-            <h1>Friska Loren</h1>
-            <a href="{{url('profil')}}">My Profile</a>
-        </div>
+        <table class="table">
+            <tr>
+                <th scope="row">Nama</th>
+                <td>Friska Loren</td>
+            </tr>
+            <tr>
+                <th scope="row">Nim</th>
+                <td>03081210019</td>
+            </tr>
+            <tr>
+                <th scope="row">Prodi</th>
+                <td>Sistem Informasi</td>
+            </tr>
+            <tr>
+                <th scope="row">Mata Kuliah</th>
+                <td>Pemrograman Aplikasi Bisnis</td>
+            </tr>
+        </table>
     </body>
-</html>
+</html> --}}
