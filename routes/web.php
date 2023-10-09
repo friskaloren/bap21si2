@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\mahasiswaController;
+use App\Http\Controllers\matakuliahController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +28,15 @@ Route::get('/profil', function () {
 Route::get('/mahasiswa', function () {
     return view('mahasiswa');
 });
+
+Route::get('/matakuliah', function () {
+    return view('matakuliah');
+});
+
+//data mata kuliah
+// Route::get('/matakuliah', [matakuliahController::class, 'index']); 
+//     return view('mahasiswa');
+// });
 
 // //data mahasiswa
 // Route::get('/Mahasiswa', [mahasiswacontroller::class, 'index']); 
