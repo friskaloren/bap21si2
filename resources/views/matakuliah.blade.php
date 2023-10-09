@@ -41,7 +41,7 @@ use App\Models\matakuliah;
                         {{$matakuliah->kodeMataKuliah}}
                     </td>
                     <td>
-                        {{$matakuliah->matakuliah}}
+                        {{$matakuliah->namaMataKuliah}}
                     </td>
                     <td>
                         {{$matakuliah->sks}}
