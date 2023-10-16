@@ -2,9 +2,9 @@
 use App\Models\mahasiswa;
 ?>
 
-@extends('layouts.app')
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
+@extends('layouts.app2')
+{{-- <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"> --}}
+    {{-- <style>
         th {
             border: 1px solid;
             text-align: center;
@@ -15,12 +15,13 @@ use App\Models\mahasiswa;
             text-align: center;
             padding: 12px;
         }
-    </style>
+    </style> --}}
 @section('title','Mahasiswa')
 @section('content')
 <div class= "container">
-    <p style= "font-size: 48px ; font-weight: bold ; text-align: start ; margin: 40px 0 0 0 ; text-decoration: underline">DATA MAHASISWA</p>     
-    <table style= "margin-top: 16px">
+    <p style= "font-size: 48px ; font-weight: bold ; text-align: center ; margin: 40px 0 0 0 ; text-decoration: underline">DATA MAHASISWA</p>     
+    {{-- <table style= "margin-right:auto ; margin-left:auto"> --}}
+    <table class="table table-bordered table-hover">
         <tr>
             <th>ID</th>
             <th>StudentID</th>
@@ -52,6 +53,7 @@ use App\Models\mahasiswa;
                         </td>
                     </tr>
                 @endforeach
+        </tr>        
     </table>
 </div>
 @endsection

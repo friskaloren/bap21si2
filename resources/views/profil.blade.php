@@ -1,33 +1,44 @@
-@extends('layouts.app')
+@extends('layouts.app2')
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Nunito', sans-serif;
+        font-family: 'Nunito', sans-serif;
+        th {
+            border: 1px solid;
+            text-align: center;
+            padding: 10px;
+        }
+        td {
+            border: 1px solid;
+            text-align: center;
+            padding: 10px;
+        }
+        td, th{
+            border: 1px solid;
         }
     </style>
 @section('title','Profil')
 @section('content')
-    <body class="antialiased">
-        <table class="table">
-            <tr>
-                <th scope="row">Nama</th>
-                <td>Friska Loren</td>
-            </tr>
-            <tr>
-                <th scope="row">Nim</th>
-                <td>03081210019</td>
-            </tr>
-            <tr>
-                <th scope="row">Prodi</th>
-                <td>Sistem Informasi</td>
-            </tr>
-            <tr>
-                <th scope="row">Mata Kuliah</th>
-                <td>Pemrograman Aplikasi Bisnis</td>
-            </tr>
-        </table>
-    </body>
+    <p style= "font-size: 42px ; font-weight: bold ; text-align: center ; margin: 40px 0 0 0">Profil</p>
+    <table style= "margin-right:auto ; margin-left:auto">
+        <tr>
+            <th>Nama</th>
+            <td>Friska Loren</td>
+        </tr>
+        <tr>
+            <th>Nim</th>
+            <td>03081210019</td>
+        </tr>
+        <tr>
+            <th>Prodi</th>
+            <td>Sistem Informasi</td>
+        </tr>
+        <tr>
+            <th>Mata Kuliah</th>
+            <td>Pemrograman Aplikasi Bisnis</td>
+        </tr>
+    </table>
 @endsection
+
 
 {{-- <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
