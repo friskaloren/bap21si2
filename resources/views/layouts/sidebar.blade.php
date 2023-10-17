@@ -35,34 +35,58 @@
              with font-awesome or any other icon font library -->
         <li class="nav-item">
             <a href="/" class="nav-link">
-                <i class="nav-icon fas fa-file"></i>
+                <i class="nav-icon fas fa-house-user"></i>
                 <p>Home</p>
             </a>
         </li> 
         <li class="nav-item">
             <a href="/Welcome" class="nav-link">
-                <i class="nav-icon fas fa-file"></i>
+                <i class="nav-icon fas fa-smile"></i>
                 <p>Welcome</p>
             </a>
         </li> 
         <li class="nav-item">
             <a href="/profil" class="nav-link">
-                <i class="nav-icon fas fa-file"></i>
+                <i class="nav-icon fas fa-user-circle"></i>
                 <p>profil</p>
             </a>
         </li> 
         <li class="nav-item">
             <a href="/mahasiswa" class="nav-link">
-                <i class="nav-icon fas fa-user-secret"></i>
+                <i class="nav-icon fas fa-user"></i>
                 <p>mahasiswa</p>
             </a>
         </li>
         <li class="nav-item">
             <a href="/matakuliah" class="nav-link">
-                <i class="nav-icon fas fa-file"></i>
+                <i class="nav-icon fas fa-th-list"></i>
                 <p>Mata Kuliah</p>
             </a>
-        </li> 
+        </li>
+        <li class="nav-item">
+          <a href="/programstudi" class="nav-link">
+              <i class="nav-icon fas fa-list"></i>
+              <p>Program Studi</p>
+          </a>
+        </li>
+      <li class="nav-item">
+        <a href="/pembayaran" class="nav-link">
+            <i class="nav-icon fas fa-wallet"></i>
+            <p>Pembayaran</p>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/jadwalperkuliahan" class="nav-link">
+            <i class="nav-icon fas fa-file"></i>
+            <p>Jadwal Perkuliahan</p>
+        </a>
+      </li>
+        {{-- <li class="nav-item">
+          <a href="/khs" class="nav-link">
+              <i class="nav-icon fas fa-file"></i>
+              <p>KHS</p>
+          </a>
+        </li>  --}}
       </ul>
     </nav>
     <!-- /.sidebar-menu -->

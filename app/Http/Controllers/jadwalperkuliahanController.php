@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\khs;
+use App\Models\jadwalperkuliahan;
 
-class khsController extends Controller
+
+class jadwalperkuliahanController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,8 +14,9 @@ class khsController extends Controller
     public function index()
     {
         //
-        $khss = khs::get();
-        return view('khs')->with('khss',$khss);
+        $jadwalperkuliahans = jadwalperkuliahan::where('id','>',0)->get();
+        return view('jadwalperkuliahan')->with('jadwalperkuliahans',$jadwalperkuliahans);
+
     }
 
     /**

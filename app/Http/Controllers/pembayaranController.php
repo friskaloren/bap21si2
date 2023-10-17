@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\khs;
+use App\Models\pembayaran;
 
-class khsController extends Controller
+class pembayaranController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,8 +13,8 @@ class khsController extends Controller
     public function index()
     {
         //
-        $khss = khs::get();
-        return view('khs')->with('khss',$khss);
+        $pembayarans = pembayaran::get();
+        return view('pembayaran')->with('pembayarans',$pembayarans);
     }
 
     /**

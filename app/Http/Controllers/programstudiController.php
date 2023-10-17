@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\khs;
+use App\Models\programstudi;
 
-class khsController extends Controller
+class programstudiController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,8 +13,8 @@ class khsController extends Controller
     public function index()
     {
         //
-        $khss = khs::get();
-        return view('khs')->with('khss',$khss);
+        $programstudis = programstudi::where('id','>',0)->get();
+        return view('programstudi')->with('programstudis',$programstudis);
     }
 
     /**

@@ -1,5 +1,5 @@
 <?php
-use App\Models\mahasiswa;
+use App\Models\pembayaran;
 ?>
 
 @extends('layouts.app2')
@@ -16,37 +16,37 @@ use App\Models\mahasiswa;
             padding: 12px;
         }
     </style> --}}
-@section('title','Mahasiswa')
+@section('title','Pembayaran')
 @section('content')
 <div class= "container">
-    <p style= "font-size: 48px ; font-weight: bold ; text-align: center ; margin: 40px 0 0 0 ; text-decoration: underline">DATA MAHASISWA</p>     
+    <p style= "font-size: 48px ; font-weight: bold ; text-align: center ; margin: 40px 0 0 0 ; text-decoration: underline">Pembayaran</p>     
     {{-- <table style= "margin-right:auto ; margin-left:auto"> --}}
     <table class="table table-bordered table-hover">
         <tr>
             <th>ID</th>
-            <th>StudentID</th>
-            <th>Nama</th>
-            <th>Jurusan</th>
-            <th>Tahun Masuk</th>
+            <th>Student ID</th>
+            <th>Amount</th>
+            <th>Payment Date</th>
+            <th>Payment Method</th>
         </tr>
 
         <tr>
-                @foreach ($mahasiswas as $mahasiswa)
+                @foreach ($pembayarans as $pembayaran)
                     <tr>
                         <td>
-                            {{$mahasiswa->id}}
+                            {{$pembayaran->id}}
                         </td>
                         <td>
-                            {{$mahasiswa->studentID}}
+                            {{$pembayaran->studentID}}
                         </td>
                         <td>
-                            {{$mahasiswa->nama}}
+                            {{$pembayaran->amount}}
                         </td>
                         <td>
-                            {{$mahasiswa->jurusan}}
+                            {{$pembayaran->paymentDate}}
                         </td>
                         <td>
-                            {{$mahasiswa->tahunMasuk}}
+                            {{$pembayaran->paymentMethod}}
                         </td>
                     </tr>
                 @endforeach

@@ -3,6 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\mahasiswaController;
 use App\Http\Controllers\matakuliahController;
+use App\Http\Controllers\khsController;
+use App\Http\Controllers\programstudiController;
+use App\Http\Controllers\pembayaranController;
+use App\Http\Controllers\jadwalperkuliahanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,20 +29,14 @@ Route::get('/profil', function () {
     return view('profil');
 });
 
-Route::get('/mahasiswa', function () {
-    return view('mahasiswa');
-});
-
-Route::get('/matakuliah', function () {
-    return view('matakuliah');
-});
-
 //data mata kuliah
-// Route::get('/matakuliah', [matakuliahController::class, 'index']); 
-//     return view('mahasiswa');
-// });
+Route::get('/matakuliah', [matakuliahController::class, 'index']); 
 
-// //data mahasiswa
-// Route::get('/Mahasiswa', [mahasiswacontroller::class, 'index']); 
-// //     return view('mahasiswa');
-// // });
+//data mahasiswa
+Route::get('/mahasiswa', [mahasiswaController::class, 'index']); 
+Route::get('/programstudi', [programstudiController::class, 'index']); 
+Route::get('/pembayaran', [pembayaranController::class, 'index']); 
+Route::get('/jadwalperkuliahan', [jadwalperkuliahanController::class, 'index']); 
+
+//data khs
+Route::get('/khs', [khsController::class, 'index']); 

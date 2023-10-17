@@ -2,7 +2,7 @@
 use App\Models\matakuliah;
 ?>
 
-@extends('layouts.app')
+@extends('layouts.app2')
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         th {

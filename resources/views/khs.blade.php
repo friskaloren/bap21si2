@@ -1,5 +1,5 @@
 <?php
-use App\Models\mahasiswa;
+use App\Models\khs;
 ?>
 
 @extends('layouts.app2')
@@ -16,37 +16,33 @@ use App\Models\mahasiswa;
             padding: 12px;
         }
     </style> --}}
-@section('title','Mahasiswa')
+@section('title','KHS')
 @section('content')
 <div class= "container">
-    <p style= "font-size: 48px ; font-weight: bold ; text-align: center ; margin: 40px 0 0 0 ; text-decoration: underline">DATA MAHASISWA</p>     
+    <p style= "font-size: 48px ; font-weight: bold ; text-align: center ; margin: 40px 0 0 0 ; text-decoration: underline">DATA KHS</p>     
     {{-- <table style= "margin-right:auto ; margin-left:auto"> --}}
     <table class="table table-bordered table-hover">
         <tr>
             <th>ID</th>
-            <th>StudentID</th>
-            <th>Nama</th>
-            <th>Jurusan</th>
-            <th>Tahun Masuk</th>
+            <th>Kode KHS</th>
+            <th>Keterangan</th>
+            <th>Keterangan Singkat</th>
         </tr>
 
         <tr>
-                @foreach ($mahasiswas as $mahasiswa)
+                @foreach ($khss as $khs)
                     <tr>
                         <td>
-                            {{$mahasiswa->id}}
+                            {{$khs->id}}
                         </td>
                         <td>
-                            {{$mahasiswa->studentID}}
+                            {{$khs->kodeKhs}}
                         </td>
                         <td>
-                            {{$mahasiswa->nama}}
+                            {{$khs->keterangan}}
                         </td>
                         <td>
-                            {{$mahasiswa->jurusan}}
-                        </td>
-                        <td>
-                            {{$mahasiswa->tahunMasuk}}
+                            {{$khs->keteranganSingkat}}
                         </td>
                     </tr>
                 @endforeach
