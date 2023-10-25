@@ -7,6 +7,7 @@ use App\Http\Controllers\khsController;
 use App\Http\Controllers\programstudiController;
 use App\Http\Controllers\pembayaranController;
 use App\Http\Controllers\jadwalperkuliahanController;
+use App\Http\Controllers\Admin\ItemController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,3 +41,5 @@ Route::get('/jadwalperkuliahan', [jadwalperkuliahanController::class, 'index']);
 
 //data khs
 Route::get('/khs', [khsController::class, 'index']); 
+Route::resource('/admin/Item', ItemController::class);
+// Route::resource('admin/Item', 'App\Http\Controllers\Admin\ItemController');
