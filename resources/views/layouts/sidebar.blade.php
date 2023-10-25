@@ -81,6 +81,18 @@
             <p>Jadwal Perkuliahan</p>
         </a>
       </li>
+      <li class="nav-item">
+        <a href="/admin/item" class="nav-link">
+            <i class="nav-icon fas fa-file"></i>
+            <p>Item</p>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/mahasiwa/Mahasiswa2" class="nav-link">
+            <i class="nav-icon fas fa-file"></i>
+            <p>Mahasiswa2</p>
+        </a>
+      </li>
         {{-- <li class="nav-item">
           <a href="/khs" class="nav-link">
               <i class="nav-icon fas fa-file"></i>

@@ -156,11 +156,11 @@ class taskSeeder extends Seeder
 
         for($i = 1; $i <= 15; $i++){
  
-          DB::table('users')->insert([
+            DB::table('users')->insert([
               'name' => $faker->name,
               'email' => $faker->email,
               'password' => $faker->password,
-          ]);
+            ]);
       }
     }
 }
