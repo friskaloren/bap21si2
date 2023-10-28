@@ -87,6 +87,18 @@
             <p>Item</p>
         </a>
       </li>
+      <li class="nav-item">
+        <a href="/mahasiswa/Mahasiswa2" class="nav-link">
+            <i class="nav-icon fas fa-file"></i>
+            <p>Mahasiswa 2</p>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/matakuliah/matakuliah-friska" class="nav-link">
+            <i class="nav-icon fas fa-file"></i>
+            <p>Mata kuliah-friska</p>
+        </a>
+      </li>
         {{-- <li class="nav-item">
           <a href="/khs" class="nav-link">
               <i class="nav-icon fas fa-file"></i>
