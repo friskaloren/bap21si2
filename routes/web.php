@@ -10,6 +10,7 @@ use App\Http\Controllers\jadwalperkuliahanController;
 use App\Http\Controllers\Admin\ItemController;
 use App\Http\Controllers\Mahasiswa\Mahasiswa2Controller;
 use App\Http\Controllers\Matakuliah\MatakuliahFriskaController;
+use App\Http\Controllers\laporanMahasiswaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,17 +33,28 @@ Route::get('/profil', function () {
     return view('profil');
 });
 
-//data mata kuliah
 Route::get('/matakuliah', [matakuliahController::class, 'index']); 
 
-//data mahasiswa
 Route::get('/mahasiswa', [mahasiswaController::class, 'index']); 
+
 Route::get('/programstudi', [programstudiController::class, 'index']); 
+
 Route::get('/pembayaran', [pembayaranController::class, 'index']); 
+
 Route::get('/jadwalperkuliahan', [jadwalperkuliahanController::class, 'index']); 
 
-//data khs
 Route::get('/khs', [khsController::class, 'index']); 
+
 Route::resource('/admin/Item', ItemController::class);
+
 Route::resource('/mahasiswa/Mahasiswa2', Mahasiswa2Controller::class);
+
 Route::resource('/matakuliah/matakuliah-friska', MatakuliahFriskaController::class);
+
+Route::get('/laporan', [laporanMahasiswaController::class,'index']);
+
+Route::get('/laporan/cetak_pdf', [laporanMahasiswaController::class,'cetak_pdf']); //cetak pdf
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

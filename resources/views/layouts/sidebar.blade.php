@@ -12,7 +12,12 @@
         <img src="{{ asset('AdminLTE/dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
       </div>
       <div class="info">
-        <a href="#" class="d-block">Alexander Pierce</a>
+        <a href="#" class="d-block">
+          @guest
+          @else 
+          {{Auth::user()->name}}
+          @endguest
+        </a>
       </div>
     </div>
 
@@ -33,6 +38,19 @@
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
         <!-- Add icons to the links using the .nav-icon class
              with font-awesome or any other icon font library -->
+        @guest
+          @if (Route::has('login'))
+          <li class="nav-item">
+              <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+          </li>
+          @endif
+
+          @if (Route::has('register'))
+          <li class="nav-item">
+              <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+          </li>
+          @endif
+        @else
         <li class="nav-item">
             <a href="/" class="nav-link">
                 <i class="nav-icon fas fa-house-user"></i>
@@ -69,36 +87,49 @@
               <p>Program Studi</p>
           </a>
         </li>
-      <li class="nav-item">
-        <a href="/pembayaran" class="nav-link">
-            <i class="nav-icon fas fa-wallet"></i>
-            <p>Pembayaran</p>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="/jadwalperkuliahan" class="nav-link">
+        <li class="nav-item">
+          <a href="/pembayaran" class="nav-link">
+              <i class="nav-icon fas fa-wallet"></i>
+              <p>Pembayaran</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/jadwalperkuliahan" class="nav-link">
+              <i class="nav-icon fas fa-file"></i>
+              <p>Jadwal Perkuliahan</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/admin/Item" class="nav-link">
+              <i class="nav-icon fas fa-file"></i>
+              <p>Item</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/mahasiswa/Mahasiswa2" class="nav-link">
+              <i class="nav-icon fas fa-file"></i>
+              <p>Mahasiswa 2</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/matakuliah/matakuliah-friska" class="nav-link">
+              <i class="nav-icon fas fa-file"></i>
+              <p>Mata kuliah-friska</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ route('logout') }}"
+          onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
             <i class="nav-icon fas fa-file"></i>
-            <p>Jadwal Perkuliahan</p>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="/admin/Item" class="nav-link">
-            <i class="nav-icon fas fa-file"></i>
-            <p>Item</p>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="/mahasiswa/Mahasiswa2" class="nav-link">
-            <i class="nav-icon fas fa-file"></i>
-            <p>Mahasiswa 2</p>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="/matakuliah/matakuliah-friska" class="nav-link">
-            <i class="nav-icon fas fa-file"></i>
-            <p>Mata kuliah-friska</p>
-        </a>
-      </li>
+          <p>{{ __('Logout') }}</p>
+          </a>
+
+          <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+              @csrf
+          </form>
+        </li>
+        @endguest
         {{-- <li class="nav-item">
           <a href="/khs" class="nav-link">
               <i class="nav-icon fas fa-file"></i>
